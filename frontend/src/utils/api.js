@@ -1,9 +1,9 @@
 import axios from "axios";
 
-
+console.log(process.env.REACT_APP_BASE_URL);
 export const fetchDataFromAPI = async (url) => {
   try {
-    const { data } = await axios.get("http://localhost:5000" + url);
+    const { data } = await axios.get(process.env.REACT_APP_BASE_URL + url);
     return data;
   } catch (error) {
     console.log(error);
@@ -12,7 +12,7 @@ export const fetchDataFromAPI = async (url) => {
 };
 export const fetchAllDataFromAPI = async (url) => {
   try {
-    const { data } = await axios.get("http://localhost:5000" + url);
+    const { data } = await axios.get(process.env.REACT_APP_BASE_URL + url);
     return data;
   } catch (error) {
     console.log(error);
@@ -21,12 +21,12 @@ export const fetchAllDataFromAPI = async (url) => {
 };
 
 export const postData = async (url, formData) => {
-  const { res } = await axios.post("http://localhost:5000" + url, formData);
+  const { res } = await axios.post(process.env.REACT_APP_BASE_URL + url, formData);
   return res;
 };
 export const postDataSign = async (url, formData) => {
   try {
-    const response = await fetch("http://localhost:5000" + url, {
+    const response = await fetch(process.env.REACT_APP_BASE_URL + url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -47,21 +47,21 @@ export const postDataSign = async (url, formData) => {
   }
 };
 export const editData = async (url, updatedData) => {
-  const { res } = await axios.put(`http://localhost:5000${url}`, updatedData);
+  const { res } = await axios.put(`${process.env.REACT_APP_BASE_URL}${url}`, updatedData);
   return res;
 };
 
 export const deleteData = async (url) => {
-  const {res} = await axios.delete("http://localhost:5000" +url);
+  const {res} = await axios.delete(process.env.REACT_APP_BASE_URL  +url);
   return res
 }
 
 export const uploadImage = async (url, formData) => {
-  const { res } = await axios.post(`http://localhost:5000${url}` , formData)
+  const { res } = await axios.post(`${process.env.REACT_APP_BASE_URL}${url}` , formData)
   return res;
 }
 
 export const deleteImages = async (url,image ) => {
-  const { res } = await axios.delete(`http://localhost:5000${url}`,image);
+  const { res } = await axios.delete(`${process.env.REACT_APP_BASE_URL}${url}`,image);
   return res;
 }
