@@ -1,0 +1,216 @@
+.page-wrapper {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+}
+
+.category-header {
+  background-color: #f7f7f7;
+  padding: 40px 0;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.category-header h1 {
+  font-size: 32px;
+  color: #333;
+  margin: 10px 0 0;
+  font-weight: 500;
+}
+
+.breadcrumb {
+  color: #666;
+  font-size: 14px;
+}
+
+.breadcrumb a {
+  color: #333;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #8dc63f;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.filter-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.showing-results {
+  color: #666;
+  font-size: 14px;
+}
+
+.sort-select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+}
+
+.watchGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.watchCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.imageWrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.watchImage {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.watchCard:hover .watchImage {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  transition: bottom 0.3s ease;
+}
+
+.watchCard:hover .overlay {
+  bottom: 0;
+}
+
+.quickView {
+  background: #8dc63f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.quickView:hover {
+  background: #7ab32e;
+}
+
+.sale-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff4444;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.category-tag {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.watchName {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.priceContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.originalPrice {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+
+.salePrice {
+  color: #8dc63f;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.shipping-info {
+  border-top: 1px solid #eee;
+  padding-top: 40px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.info-box {
+  margin-bottom: 30px;
+}
+
+.info-box h3 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.payment-methods h3 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.payment-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.payment-icons img {
+  height: 30px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .watchGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .filter-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .category-header {
+    padding: 30px 0;
+  }
+
+  .payment-icons {
+    flex-wrap: wrap;
+  }
+}
