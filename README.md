@@ -1,4 +1,4 @@
-# MERN_Project-WatchShop
+# MERN_Project-WatchShop (REUP)
 
 🚀 **WatchShop - A Full-Stack E-commerce Platform for Watches**
 
